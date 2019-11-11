@@ -15,5 +15,6 @@
             </ListView.View>
         </ListView>
         <Button x:Name="btnAgregar" Content="Agregar" HorizontalAlignment="Left" Height="36" Margin="33,373,0,0" VerticalAlignment="Top" Width="135" Click="BtnAgregar_Click"/>
+        <Button x:Name="btnEliminar" Content="Eliminar" HorizontalAlignment="Left" Height="36" Margin="187,373,0,0" VerticalAlignment="Top" Width="135" Click="btnEliminar_Click"/>
     </Grid>
 </Window>

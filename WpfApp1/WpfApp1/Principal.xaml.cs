@@ -47,5 +47,11 @@ namespace WpfApp1
             WpfApp1.MainWindow form = new WpfApp1.MainWindow();
             form.ShowDialog();
         }
+
+        private void BtnEliminar_Click(object sender, RoutedEventArgs e)
+        {
+            WpfApp1.EliminarDatos form = new WpfApp1.EliminarDatos();
+            form.ShowDialog();
+        }
     }
 }
