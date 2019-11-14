@@ -7,11 +7,12 @@
         mc:Ignorable="d"
         Title="EliminarDatos" Height="300" Width="300">
     <Grid>
-        <StackPanel>
+        <StackPanel Margin="10">
             <TextBox x:Name="txtNombre"
-                Margin="0,0,0,5">
-            </TextBox>
-            <Button Content="btnEliminar" Click="btnEliminar_Click"/>
+                     Margin="0,0,0,5"/>
+            <Button Content="Eliminar"
+                    x:Name="btnEliminar"
+                    Click="btnEliminar_Click"/>
         </StackPanel>
     </Grid>
 </Window>

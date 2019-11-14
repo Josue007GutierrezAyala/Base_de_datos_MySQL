@@ -30,10 +30,10 @@ namespace WpfApp1
         {
             using (SQLiteConnection conexion = new SQLiteConnection(App.databasePath))
             {
-                string sentenciaSQL = "Delete from contactos where Nombre + '" + txtNombre.Text + "'";
+                string sentenciaSQL = "delete from contactos where Nombre='"
+                    + txtNombre.Text + "'";
                 conexion.Execute(sentenciaSQL);
             }
-
             Close();
         }
     }
