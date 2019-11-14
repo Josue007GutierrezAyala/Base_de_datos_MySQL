@@ -11,7 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using WpfApp1.Clase; //pRIMERO EL NOMBRE DEL PROYECTO (LITERALMENTE)
+using WpfApp1.Clase;
 using SQLite;
 
 namespace WpfApp1
@@ -28,12 +28,14 @@ namespace WpfApp1
 
         private void btnEliminar_Click(object sender, RoutedEventArgs e)
         {
-            using (SQLiteConnection conexion= new SQLiteConnection (App.databasePath))
+            using (SQLiteConnection conexion = new SQLiteConnection(App.databasePath))
             {
                 string sentenciaSQL = "Delete from contactos where Nombre + '" + txtNombre.Text + "'";
                 conexion.Execute(sentenciaSQL);
             }
+
             Close();
         }
     }
 }
+

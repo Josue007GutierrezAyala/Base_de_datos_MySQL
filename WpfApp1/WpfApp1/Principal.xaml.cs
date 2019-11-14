@@ -11,15 +11,12 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using SQLite;
 using WpfApp1.Clase;
+using SQLite;
 
 namespace WpfApp1
+
 {
-    /// <summary>
-    /// Lógica de interacción para Principal.xaml
-    /// </summary>
-   
     public partial class Principal : Window
     {
         List<Contactos> contactos;
@@ -29,13 +26,14 @@ namespace WpfApp1
             contactos = new List<Contactos>();
             LeerBaseDatos();
         }
+
         void LeerBaseDatos()
         {
-            using (SQLiteConnection conn = new SQLite.SQLiteConnection(App.databasePath))
+            using (SQLite.SQLiteConnection conn = new SQLite.SQLiteConnection(App.databasePath))
             {
                 conn.CreateTable<Contactos>();
                 contactos = (conn.Table<Contactos>().ToList()).OrderBy(c => c.Nombre).ToList();
-                if (contactos !=null)
+                if (contactos != null)
                 {
                     lvContactos.ItemsSource = contactos;
                 }
